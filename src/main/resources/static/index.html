@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css">
+        <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="styles/style.css" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
+        <script src="scripts/app.js"></script>
+    </head>
+    <body>
+        <!--  
+        <div ng-controller="StudentCtrl as vm">
+            <div ui-grid="gridOptions" class="grid" ui-grid-pagination>
+            </div>
+        </div>
+        -->
+        <div class="container" ng-controller="MainController">
+	        <h1>Hello There!</h1>
+	        
+	        <div>
+	
+			  <!-- Nav tabs -->
+			  <ul class="nav nav-tabs" role="tablist">
+			    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+			    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"  ng-click="setTab('profile')">Profile</a></li>
+			    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" ng-click="setTab('messages')">Messages</a></li>
+			    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+			  </ul>
+			
+			  <!-- Tab panes -->
+			  <div class="tab-content">
+			    <div role="tabpanel" class="tab-pane active" id="home">Home Content...</div>
+			    <div role="tabpanel" class="tab-pane" id="profile">
+			    	 <div id="grid2" ui-grid="gridOptions2" class="grid"></div>
+			    </div>
+			    <div role="tabpanel" class="tab-pane" id="messages">
+			    	<div id="grid1" ui-grid="gridOptions1" class="grid"></div>
+			    </div>
+			    <div role="tabpanel" class="tab-pane" id="settings">Settings Content...</div>
+			  </div>
+			
+			</div>
+		</div>
+        
+    </body>
+</html>
